@@ -50,6 +50,7 @@ func main() {
      При объявлении с инициализацией, т.е ты сразу задаешь значение,
      стоит использовать такой стиль:
      */
+
      username := "Alan Wake"
      fmt.Println(username)
 
@@ -61,4 +62,17 @@ func main() {
 
      var empty_bool bool       
      fmt.Println(empty_bool)
+
+     /*
+     var variable = 91
+     fmt.Println(variable)
+     variable = 19
+     fmt.Println(variable)
+
+     
+     const constanta = 91
+     fmt.Println(constanta)
+     constanta = 19
+     fmt.Println(constanta)
+     */
   }

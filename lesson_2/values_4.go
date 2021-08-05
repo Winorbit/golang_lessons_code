@@ -18,6 +18,7 @@ fmt.Println(2.5*3)
 fmt.Println(33/7)
 var someFloat32 = float32(33)
 fmt.Println(someFloat32/float32(7))
+
 //Нельзя использовать разные типы данных - в Go нет автоматического преобразования
 fmt.Println(float32(3)/float64(77))
 */

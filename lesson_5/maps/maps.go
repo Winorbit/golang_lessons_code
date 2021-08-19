@@ -4,7 +4,6 @@ import "fmt"
 
 
 /*
-
 помещение | статус сигнализации
 -----------------------
 45  	  | true
@@ -37,22 +36,22 @@ func main() {
 		   	   				  204: "no content",}
 
     // GET
-    /*
-	fmt.Println(okCodes)
-	fmt.Println(okCodes[202])
+    
+	//fmt.Println(okCodes)
+	//fmt.Println(okCodes[202])
 
-	code := okCodes[202] 
-	fmt.Println(code)
+	//code := okCodes[202] 
+	//fmt.Println(code)
 
 	// Что будет, если обратимся по несуществующему ключу? Пустота
-	fmt.Println(okCodes[999])
-	*/
+	//fmt.Println(okCodes[999])
+	
 
 	// А вот так - ошибка
 	//fmt.Println(okCodes["999"])
 
 	// Update + Add
-	/*
+	
 	fmt.Println(okCodes[204])
 	okCodes[204] = "Hello"
 	fmt.Println(okCodes[204])
@@ -60,7 +59,7 @@ func main() {
 
 	okCodes[208] = "already reported"
 	fmt.Println(okCodes)
-	*/
+	
 	
 	// А вот так - нельзя
 	//okCodes[208] = 802 

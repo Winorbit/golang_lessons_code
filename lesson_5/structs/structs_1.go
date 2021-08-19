@@ -3,16 +3,8 @@ package main
 import "fmt"
 
 /*
-Окей, мы представляли инфу как набор строк, да.
-Но у нас есть вопрос относительно юзера.
-Да и большая точность нам не помешает.
-Но как нам сказать, что есть 
-юзер. У него парамeтр такой.
-И такой. И такой?
-
-
-
 Опишем нашего юзера
+
 -----------------------
 name  	  		  | Jason Born
 -----------------------
@@ -23,7 +15,10 @@ lattitude 		  | 120.06
 longitude 		  | 99.13
 
 
+
+
 Опишем юзера прилаги
+
 -----------------------
 name  	  		  | Foma Kiniaev
 -----------------------
@@ -57,23 +52,21 @@ user_phone	| 555-3434-953 <str/int ?>
 func main() {
 	// Значения полей могут быть какими угодно - хоть массивами, хоть другми страктами
 	
-	type User struct{Name string
-			 		 Address string
-			 		 CardIsActive bool
-			 		 Lattitude float32
-			 		 Longitude float32}
-
-	
-	
-	var fomaKinaev User
-	fmt.Println(fomaKinaev)
-	
-	
-
 	/*
-	var fomaKinaev User = User{"J.Born", "", false, 112.00, 43.98}
-	fmt.Println(fomaKinaev)
+	type User struct{Name         string
+			 		 Address      string
+			 		 CardIsActive bool
+			 		 Lattitude    float32
+			 		 Longitude    float32}
 	*/
+
+	//var fomaKinaev User
+	//fmt.Println(fomaKinaev)
+
+	
+	// var fomaKinaev User = User{"J.Born", "", false, 112.00, 43.98}
+	// fmt.Println(fomaKinaev)
+	
 
 	/*
 	var fomaKinaev User = User{Name: "J.B.",
@@ -90,15 +83,16 @@ func main() {
 			     	  CardIsActive: false,
 			     	  Lattitude: 145.09,
 			     	  Longitude: 77.54}
-
-	fmt.Println(jackBauer)
 	*/
+
+	//fmt.Println(jackBauer)
+	
 
 	//Get element
-	/*
-	fmt.Println(jackBauer.Name)
-	fmt.Println(jackBauer.Lattitude)
-	*/
+	
+	//fmt.Println(jackBauer.Name)
+	//fmt.Println(jackBauer.Lattitude)
+	
 
 	//Update
 	/*
@@ -106,9 +100,9 @@ func main() {
 	jackBauer.CardIsActive = true
 	fmt.Println(jackBauer.CardIsActive)
 	*/
+	
 
 	// Тип не верный, ошибка
-
 	//jackBauer.CardIsActive = "Yes"
 	//jackBauer.CardIsActive = 1
 	
@@ -119,17 +113,19 @@ func main() {
 
 	sentence := Sentence{Text: "The Consul watched as Kassad raised the death wand.", 	
 						 Level: 1}
-	fmt.Println(sentence)
-	fmt.Println(sentence.Text)
 	*/
+	//fmt.Println(sentence)
+	//fmt.Println(sentence.Text)
 	
-	/*
+	
+	
 	type User struct{Username string
 					 Level int}
 
 	user := User{Username: "Egor", Level: 1}
 	fmt.Println(user)
 	fmt.Println(user.Username)
-	*/
+	fmt.Println(user.Level)
+	
 	
 }

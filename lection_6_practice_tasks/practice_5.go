@@ -27,22 +27,25 @@ func main() {
 
 	fmt.Println("Введи слово на английском, которое хочешь выучить:")
     fmt.Scanf("%s", &word)
+
 	
-	for _, sentence := range quotes{
-	  wordInSentence := str.Contains(str.ToLower(sentence.Text), str.ToLower(word))
-	  if wordInSentence{
-	    match_sentences = append(match_sentences, sentence.Text)}}
-	
-	if len(match_sentences) == 0{
-	  fmt.Println("Не найдено подходящих предложений.")
+	for _, sentence := range quotes {
+		 wordInSentence := str.Contains(str.ToLower(sentence.Text), str.ToLower(word))
+		if wordInSentence {
+			match_sentences = append(match_sentences, sentence.Text)
+		} 
 	}
-	if len(match_sentences) == 1{
-	  fmt.Println(match_sentences[0])
+
+	countSentences := len(match_sentences)
+
+	switch {
+	case countSentences == 0:
+		fmt.Println("Sorry :(")
+	case countSentences == 1:
+		fmt.Println(match_sentences[0])
+	case countSentences > 1:
+		for _, sent := range match_sentences {
+			fmt.Println(sent)
+		} 
 	}
-	if len(match_sentences) > 1{
-	  for _, sentence := range match_sentences{
-	    fmt.Println(sentence)}
-	}
-    
-	
 }

@@ -1,7 +1,8 @@
 package main
 
 import ("fmt"
-		str "strings")
+		str "strings"
+	)
 
 type Sentence struct {Text string
 		    		  Level int}
@@ -30,16 +31,18 @@ func main() {
 	var username string
     var englishLevel int
 
-    fmt.Println("Привет! Как тебя")
-    fmt.Scanf(...)
+    fmt.Println("Привет! Как тебя зовут?")
+    fmt.Scanf("%s", &username)
 
     fmt.Println("Какой у тебя уровень английского?")
-    fmt.Scanf(...)
+    fmt.Scanf("%d", &englishLevel)
 
 	fmt.Println("Введи слово на английском, которое хочешь выучить:")
-    fmt.Scanf(...)
+    fmt.Scanf("%s", &word)
 
-    me := ...
+    me := User{ Username: username, Level: englishLevel }
+    fmt.Println(me)
+
 	
 	for _, sentence := range quotes{
 	  wordInSentence := str.Contains(str.ToLower(sentence.Text), str.ToLower(word))

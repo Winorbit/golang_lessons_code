@@ -1,9 +1,10 @@
 package main
 
-import "net/http"
-import "encoding/json"
-import "fmt"
-import "net/url"
+import ("net/http"
+        "encoding/json"
+        "strconv"
+        "fmt"
+        "net/url")
 
 type Chat struct {
   Id int `json:"id"`
@@ -41,7 +42,7 @@ func getUpdates(token string) Updates {
 
 
 func sendMessage(chatId string, message string, token string) {
-  sendMessageURL := fmt.Sprintf("%s%s/sendMessage", rootURL, botToken)
+  sendMessageURL := fmt.Sprintf("%s%s/sendMessage", rootURL, token)
   _, err := http.PostForm(sendMessageURL,
                           url.Values{"chat_id": {chatId},
                                      "text": {message} })
@@ -52,14 +53,14 @@ func sendMessage(chatId string, message string, token string) {
 }
 
 func main(){
-  updates := getUpdates(botToken)
+  updates := getUpdates(token)
   lastMessageIndex := len(updates.Updates) - 1 
   chatId := updates.Updates[lastMessageIndex].Message.Chat.Id
 
   // Отправить свое сообщение
-  sendMessage(string(chatId), "Hello!", botToken)
+  sendMessage(strconv.Itoa(chatId), "Hello!", token)
 
   // Отправить эхо
   echoMessage := updates.Updates[lastMessageIndex].Message.Text
-  sendMessage(string(chatId), echoMessage, botToken)
+  sendMessage(strconv.Itoa(chatId), echoMessage, token)
 }

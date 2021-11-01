@@ -1,3 +1,3 @@
-module english_bot
+module bot
 
 go 1.17

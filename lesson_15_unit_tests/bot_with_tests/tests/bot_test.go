@@ -1,6 +1,6 @@
 package tests
 
-import ("english_bot/src"
+import ("bot/bot"
         "testing"
     	  "fmt")
 

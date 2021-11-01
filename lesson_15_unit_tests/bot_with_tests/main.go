@@ -1,6 +1,6 @@
 package main
 
-import "english_bot/bot"
+import "bot/bot"
 
 func main(){
   bot.Pooling(bot.BotToken)}

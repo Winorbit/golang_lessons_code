@@ -1,8 +1,7 @@
 package bot
 
 import ("log"
-        "os"
-        "fmt")
+        "os")
 
 const rootURL = "https://api.telegram.org/bot"
 var BotToken = getTokenFromEnv()
